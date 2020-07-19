@@ -27,7 +27,7 @@ Create a new Github issue for review: [https://github.com/ten7/tractorbeam/issue
 * Need someone else to implement Tractorbeam within your organization? [Contact TEN7 for help](https://ten7.com/contact-us)
 
 
-## How TEN7 uses Tractorbeam
+#### How TEN7 uses Tractorbeam
 
 Tractorbeam forms a core part of TEN7's services, powering each and every website backup. Some TEN7 clients are hosted in a  [Kubernetes cloud](https://ten7.com/podcast/episode/kubernetes-our-next-gen-site-hosting) at [DigitalOcean](https://m.do.co/c/5fb69d9c62e4), while others are at [Pantheon](https://pantheon.io/) or even [platform.sh](https://platform.sh/). All clients have at least two geographically redundant backups at all times: 
 * DigitalOcean clients get local backups and two off-site backups in two different geographic locations (AWS S3 on the east coast and Google Cloud all over the US)
