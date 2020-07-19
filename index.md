@@ -31,23 +31,3 @@ The value of a backup decreases the older it gets. If you have a website problem
 
 Because your host’s backups are likely in the same data center—if not the same server—that your site lives on. What if something happens to that server or that data center? Your site and your backups might be compromised. It always makes good business sense to have off-site backups in different geographical locations from your site host.
 
-
-## How we use Tractorbeam for our clients
-
-Tractorbeam forms a part of our core business offering and powers each of our client’s backups, both onsite and off-site. Some clients are hosted [in our Kubernetes cloud](https://ten7.com/podcast/episode/kubernetes-our-next-gen-site-hosting) at[ DigitalOcean](https://www.digitalocean.com/), while others are at[ Pantheon](https://pantheon.io/) or even[ platform.sh](https://platform.sh/). All clients have at least two geographically redundant backups at all times. 
-
-Our DigitalOcean clients get local backups and two off-site backups in two different geographic locations (AWS S3 on the east coast and Google Cloud all over the US). 
-
-Our clients at Pantheon or platform.sh already have their own local backups, but we provide three geographically redundant backups at DigitalOcean, AWS and Google Cloud. 
-
-**Would you like us to manage your site backups (or more)?** [Let’s talk](https://ten7.com/contact-us).
-
-
-# Built with love by TEN7
-
-Tractorbeam is built and supported by[ TEN7](https://ten7.com/). We create and care for Drupal-powered websites.
-
-
-*   Ready to use Tractorbeam? [Get it from Github](https://github.com/ten7/tractorbeam)
-*   Listen to episode 93 on [The TEN7 Podcast](https://ten7.com/podcast) with [@socketwench](https://twitter.com/socketwench) titled [Tractorbeam: Our open source multi-tier backup solution](https://ten7.com/podcast/episode/tractorbeam-our-open-source-multi-tier-backup-solution)
-*   Need some help? [Create a new Github issue](https://github.com/ten7/tractorbeam/issues/new) for us to review.

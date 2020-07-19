@@ -16,7 +16,8 @@
     - name: Deployment
       link: /setup#deployment
     - name: Debugging
-      link: /setup#debugging                              
+      link: /setup#debugging
+- name: Support
+  link: /support/
 - name: Github
-  link: https://github.com/ten7/tractorbeam    
-
+  link: https://github.com/ten7/tractorbeam  
