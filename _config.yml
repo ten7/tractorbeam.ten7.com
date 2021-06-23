@@ -2,7 +2,6 @@ title: Tractorbeam
 url: "https://tractorbeam.ten7.com"
 permalink: pretty
 favicon: /images/favicon-32x32.png
-google_analytics: UA-1719985-8
 plugins:
   - jekyll-relative-links
 relative_links:
