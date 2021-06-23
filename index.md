@@ -7,10 +7,6 @@ hide_hero: true
 
 # Tractorbeam
 
-
-<img src="/images/logo.svg" class="is-pulled-right is-one-third" width="33%"/>
-
-
 ## Open source multi-tier website backups
 
 Tractorbeam is a Docker container that can back up your entire website from a variety of hosts to S3-compatible object stores like AWS S3, [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/?refcode=5fb69d9c62e4), Google Cloud Storage, Ceph Object Storage, and more.  All libraries and utilities are built in to the container, so there's nothing more you need.
@@ -23,7 +19,7 @@ Because your host’s backups are likely in the same place as your site. What if
 
 ## Using Tractorbeam
 
-Run the single shot container on your own infrastructure, see [tractorbeam.me/setup](/setup/) for details.
+Run the single shot container on your own infrastructure, see [tractorbeam.ten7.com/setup](/setup/) for details.
 
 
 ## Capabilities
@@ -48,4 +44,4 @@ It's free to use Tractorbeam, but you will need to pay to host it somewhere. For
 
 ## Support
 
-For support, please visit [tractorbeam.me/support](/support/)
+For support, please visit [tractorbeam.ten7.com/support](/support/)
