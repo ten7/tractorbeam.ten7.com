@@ -87,6 +87,7 @@ tractorbeam:
   platformshFiles: {}
   archives: {}
   files: {}
+  local: {}
   s3: {}
 ```
 
@@ -97,6 +98,7 @@ Where:
 * **platformshFiles** is a list of [platform.sh](https://platform.sh) file mounts to back up to S3.
 * **archives** is a list of SSH-accessible (SSH, SFTP, rsync-over-ssh) directories from which to create a snapshot archive, and upload to S3.
 * **files** is a list SSH-accessible files to perform a rolling directory backup to S3.
+* **local** is a directory of files local to the container to backup to S3.
 * **s3** is a list of backups to duplicate files between S3 buckets.
 
 ### Specifying the backup target
@@ -116,7 +118,6 @@ tractorbeam:
 * **prefix** is the prefix to use when saving the backup. Optional, defaults to an empty string.
 * **accessKey** is the S3 access key. Optional if `accessKeyFile` is defined.
 * **secretKey** is the S3 secret key. Optional if `secretKeyFile` is defined.
-
 
 ### Using separate files for credentials
 
@@ -138,6 +139,9 @@ Where:
 * **accessKeyFile** is the full path inside the container to a file containing the S3 bucket access key.
 * **secretKeyFile** is the full path inside the container to a file containing the S3 bucket secret key.
 
+### Special characters access and secret keys
+
+Some S3 providers, such as Ceph or DigitalOcean, have special characters in the access and secret keys. This can be difficult to escape in YAML, leading to `signature does not match` errors. For this reason, it is *highly* recommended to always use `accessKeyFile` and `secretKeyFile`. 
 
 ### Specifying the region
 
@@ -244,7 +248,7 @@ The each item describes a MySQL/MariaDB database to backup, where:
 * **password** is the password to access the database. Optional if `passwordFile` is defined.
 * **host** is the database hostname. Optional, defaults to `localhost`.
 
-If you prefer to keep the **password** in a separate file, you can use `passwordFile` instead:
+You may wish to keep the **password** in a separate file. When running on Kubernetes, you may wish to keep the tractorbeam.yml in a configmap, while breaking out the **password** to a secret. Furthermore, your database password may container characters which are difficult to escape properly in YAML. In either case, you can use `passwordFile` instead:
 
 ```yaml
 tractorbeam:
@@ -461,6 +465,29 @@ tractorbeam:
 
 Note that you can associate multiple SSH keys with your platform.sh account. It is highly recommended to create a dedicated key for Tractorbeam, rather than share your existing key.
 
+### Backing up local files
+
+If you have a locally mounted volume or directory of files to backup to S3, you can use `tractorbeam.local` list:
+
+```yaml
+tractorbeam:
+  local:
+    - path: "/path/to/my/files/in/container"
+      provider: "Digitalocean"
+      bucket: "my_bucket_name"
+      prefix: "my/custom/prefix"
+      accessKey: "abcef123456"
+      secretKey: "abcef123456"
+      endpoint: "https://sfo2.digitaloceanspaces.com"
+```
+
+Where:
+
+* **path** is the path to the directory to backup inside the running tractorbeam container.
+* **bucket** is the S3 bucket name used to store the backup. Required.
+* **prefix** is the prefix to use when saving the backup. Optional, defaults to an empty string.
+* **accessKey** is the S3 access key. Optional if `accessKeyFile` is defined.
+* **secretKey** is the S3 secret key. Optional if `secretKeyFile` is defined.
 
 ### Backing up S3 Buckets
 
