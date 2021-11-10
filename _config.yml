@@ -38,7 +38,6 @@ nav:
     - title: "Github"
       description: "Check out our Github"
       url: "https://github.com/ten7/tractorbeam.ten7.com"
-      is_button: true
       is_mobile_nav_item: true
 
 
