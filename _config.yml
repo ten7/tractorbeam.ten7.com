@@ -1,7 +1,5 @@
 title: Tractorbeam
-subtitle: "Version 1.0.0, 11/09/21"
 url: "https://tractorbeam.ten7.com"
-favicon: /images/favicon-32x32.png
 plugins:
     - jekyll-relative-links
     - jekyll-feed
@@ -11,9 +9,6 @@ relative_links:
     collections: true
 include:
     - index.md
-remote_theme: chrisrhymes/bulma-clean-theme
-
-
 nav:
     - title: "How To"
       is_mobile_nav_item: false
