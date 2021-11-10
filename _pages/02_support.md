@@ -1,5 +1,6 @@
 ---
 title: Support
+permalink: support.html
 layout: page
 show_sidebar: false
 hide_hero: true
@@ -23,7 +24,7 @@ Create a new Github issue for review: [https://github.com/ten7/tractorbeam/issue
 * Build it yourself and submit a [new pull request](https://github.com/ten7/tractorbeam/compare)
 
 ### Need help implementing Tractorbeam?
-* To figure it out yourself, read through the [setup documention](/setup)
+* To figure it out yourself, read through the [setup documention](/setup.html)
 * Need someone else to implement Tractorbeam within your organization? [Contact TEN7 for help](https://ten7.com/contact-us)
 
 

@@ -12,7 +12,7 @@
 
 		<div id="thisNavBar" class="navbar-menu">
 			<div class="navbar-item has-dropdown">
-				<a class="navbar-link is-hidden-mobile is-hidden-touch">Start Here</a>
+				<a class="navbar-link is-hidden-mobile is-hidden-touch">{{ item.title }}</a>
 
 				<div class="navbar-dropdown">
 					{% for entry in item.subfolderitems.items %}

@@ -12,6 +12,7 @@
 	font-family: $font-family;
 	font-size: 1.125rem;
 	font-weight: 500;
+	-webkit-tap-highlight-color: transparent;
 
 	&::after {
 		border-color: $color-mediumpurple;
@@ -30,13 +31,6 @@
 	background-color: $color-paper;
 	color: $color-mediumpurple;
 }
-
-// .nav .navbar-menu {
-// 	@include until($tablet) {
-// 		box-shadow: 2px 2px 3px #888;
-// 	}
-	
-// }
 
 .navbar-subitem {
 	border-bottom: 1px solid #f4eee9;
