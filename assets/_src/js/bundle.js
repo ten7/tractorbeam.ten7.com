@@ -36,4 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Resize mobile brand text if long title
+  const titleText = document.querySelectorAll('.nav-brand-title')[0];
+  const titleLength = titleText.innerHTML.length;
+
+  if (titleLength >= 26) {
+    titleText.classList.toggle('is-1rem');
+  } else if (titleLength >= 24) {
+    titleText.classList.toggle('is-1-1rem');
+  } else if (titleLength >= 23) {
+    titleText.classList.toggle('is-1-2rem');
+  } else if (titleLength >= 20) {
+    titleText.classList.toggle('is-1-4rem');
+  } else if (titleLength >= 18) {
+    titleText.classList.toggle('is-1-5rem');
+  }
 });

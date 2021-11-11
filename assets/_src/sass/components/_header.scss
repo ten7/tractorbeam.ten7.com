@@ -22,9 +22,7 @@
 	&-brand-link {
 		color: $color-mediumpurple;
 		display: block;
-		padding: 1.25rem;
-		-webkit-tap-highlight-color: transparent;
-		width: 10.375rem;
+		white-space: nowrap;
 	}
 
 	&-brand-title {
@@ -118,17 +116,9 @@
 	.nav {
 		margin-bottom: 0;
 
-		&-brand-link {
-			padding: 1.5rem 1.25rem 1.25rem;
-		}
-
 		&-brand-title {
 			white-space: nowrap;
 		}
-
-		// &-container {
-		// 	background: $color-electricpurple;
-		// }
 
 		&bar-burger {
 			color: $color-mediumpurple;
@@ -180,7 +170,7 @@
 
 		&bar-burger span {
 			height: 3px;
-			left: calc(50% - 21px);
+			left: calc(50% - 16px);
 			width: 32px;
 		}
 
@@ -194,6 +184,26 @@
 
 		&bar-burger span:nth-child(3) {
 			top: calc(50% + 11px);
+		}
+
+		&-brand-title.is-1rem {
+			font-size: 1rem;
+		}
+
+		&-brand-title.is-1-1rem {
+			font-size: 1.1rem;
+		}
+
+		&-brand-title.is-1-2rem {
+			font-size: 1.2rem;
+		}
+
+		&-brand-title.is-1-4rem {
+			font-size: 1.4rem;
+		}
+
+		&-brand-title.is-1-5rem {
+			font-size: 1.5rem;
 		}
 	}
 }
