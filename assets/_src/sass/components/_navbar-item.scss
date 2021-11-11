@@ -12,7 +12,6 @@
 	font-family: $font-family;
 	font-size: 1.125rem;
 	font-weight: 500;
-	-webkit-tap-highlight-color: transparent;
 
 	&::after {
 		border-color: $color-mediumpurple;
@@ -75,6 +74,19 @@
 	}
 }
 
+.navbar-item-header {
+	border-bottom: 1px solid #f4eee9;
+	color: $color-mediumpurple;
+	font-size: 1.5rem;
+	padding: 1rem 1.5rem;
+}
+
+.navbar-dropdown .navbar-item-indent {
+	@include until($tablet) {
+		padding-left: 3rem;
+	}
+}
+
 @media screen and (max-width: 1023px) {
 	.navbar-menu.is-active {
 		display: block;
@@ -91,10 +103,6 @@
 
 	.navbar-subitem .navbar-subitem-title {
 		font-size: 1.5rem;
-	}
-
-	.navbar-subitem .navbar-subitem-content {
-		margin-left: 5px;
 	}
 
 	.navbar-item .navbar-dropdown {

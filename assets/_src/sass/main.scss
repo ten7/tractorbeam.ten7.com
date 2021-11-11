@@ -114,6 +114,22 @@ a {
 	align-items: center;
 	display: flex;
 	height: 6rem;
+
+	
+}
+
+.navbar .navbar-brand {
+	align-items: center;
+	display: flex;
+	margin-left: 2rem;
+
+	@include until(1024px) {
+		margin-left: 2.5rem;
+	}
+
+	@include until($tablet) {
+		margin-left: 1.5rem;
+	}
 }
 
 .nav-container .column {
@@ -151,20 +167,10 @@ a {
 		margin-bottom: 0;
 		padding: 2rem 2.5rem 3.7rem;
 	}
-
-	.nav-brand-link,
-	.navbar-burger {
-		padding: 1.5rem 2.5rem;
-	}
 }
 
 @media screen and (max-width: 769px) {
 	.content {
 		padding: 1.9rem 1.5rem 3.3rem;
-	}
-
-	.nav-brand-link,
-	.navbar-burger {
-		padding: 1.7rem 1.5rem 1.5rem;
 	}
 }

@@ -1,7 +1,7 @@
 .navbar-subitem {
 	border-bottom: 1px solid #f4eee9;
 	display: flex;
-	padding: 1rem 2rem;
+	padding: 1rem 1.5rem;
 	transition: all 0.2s ease-in;
 
 	&:hover {
@@ -15,10 +15,6 @@
 
 	&:hover .navbar-subitem-description {
 		color: $color-mediumpurple;
-	}
-
-	&-content {
-		margin-left: 2px;
 	}
 
 	&-icon {
