@@ -1,7 +1,11 @@
+<div id="thisNavBar" class="navbar-menu">
+<div class="navbar-item has-dropdown">
+	
 {% for item in site.nav %}
 
 	{% if item.subfolderitems %}
-	
+		<!-- header for mobile dropdown -->
+		<div class="navbar-item-header is-hidden-desktop">{{ item.title }}</div> 
 		{% assign nav_title = item.title %}
 	
 		{% for entry in item.subfolderitems.items %}
@@ -10,20 +14,19 @@
 			{% endif %}
 		{% endfor %}
 
-		<div id="thisNavBar" class="navbar-menu">
-			<div class="navbar-item has-dropdown">
+		
 				<a class="navbar-link is-hidden-mobile is-hidden-touch">{{ item.title }}</a>
 
 				<div class="navbar-dropdown">
 					{% for entry in item.subfolderitems.items %}
 
 						{% if entry.url == page.url %}
-							<a class="navbar-subitem is-active" href="{{ entry.url }}">
+							<a class="navbar-subitem navbar-item-indent is-active" href="{{ entry.url }}">
 						{% else %}
-							<a class="navbar-subitem" href="{{ entry.url }}">
+							<a class="navbar-subitem navbar-item-indent" href="{{ entry.url }}">
 						{% endif %}
 								<span class="navbar-subitem-content">
-									<span class="navbar-subitem-title">{{ entry.title }}</span>
+									<span class="navbar-subitem-title navbar-subitem-title-smaller">{{ entry.title }}</span>
 									{% if entry.description %}
 										<span class="navbar-subitem-description">{{ entry.description }}</span>
 									{% endif %}
@@ -56,13 +59,17 @@
 					{% endfor %}
 				</div>
 
-			</div>
-		</div>        
+       
 	
 	{% else %}
-	
-		<a class="navbar-item is-hidden-touch" href="{{ item.url }}">{{ item.title }}</a>
+		
+		{% unless item.is_button %}
+			<a class="navbar-item is-hidden-touch" href="{{ item.url }}">{{ item.title }}</a>
+		{% endunless %}
 	
 	{% endif %}
 
 {% endfor %}
+
+</div>
+</div> 

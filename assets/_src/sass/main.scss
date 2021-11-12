@@ -30,7 +30,6 @@
 @import 'components/navbar-item';
 @import 'components/navbar-subitem';
 @import 'components/pager';
-@import 'components/progress-bar';
 
 /* complete */
 @font-face {
@@ -79,9 +78,6 @@
 	src: url('/assets/fonts/founders-grotesk-text-web-regular.woff2') format('woff2');
 }
 
-/*
- * css styles go here
- */
 html {
 	background-color: $color-darkpurple;
 }
@@ -110,61 +106,19 @@ a {
 	}
 }
 
-.navbar {
-	align-items: center;
-	display: flex;
-	height: 6rem;
-}
+.container {
+			
+	@include from($desktop) {
+		.column.is-8 {
+			width: $content-width;
+		}
 
-.nav-container .column {
-	max-width: $navbar-width;
-}
-
-.navbar-dropdown {
-	padding: 0;
-}
-
-@media screen and (min-width: 1216px) {
-	.container:not(.is-max-desktop) {
-		max-width: none;
+		&:not(.is-max-desktop):not(.is-max-widescreen) {
+			max-width: none;
+		}	
 	}
-}
 
-@media screen and (min-width: 1024px) {
-	.container {
-		max-width: none;
-	}
-}
-
-@media screen and (min-width: 1408px) {
-	.container:not(.is-max-desktop):not(.is-max-widescreen) {
-		max-width: none;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	.container .column {
+	.column {
 		width: 100%;
-	}
-
-	.content {
-		margin-bottom: 0;
-		padding: 2rem 2.5rem 3.7rem;
-	}
-
-	.nav-brand-link,
-	.navbar-burger {
-		padding: 1.5rem 2.5rem;
-	}
-}
-
-@media screen and (max-width: 769px) {
-	.content {
-		padding: 1.9rem 1.5rem 3.3rem;
-	}
-
-	.nav-brand-link,
-	.navbar-burger {
-		padding: 1.7rem 1.5rem 1.5rem;
 	}
 }

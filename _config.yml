@@ -41,18 +41,18 @@ nav:
     - title: "Support"
       description: "Find the support you need"
       url: "/support.html"
-      is_mobile_nav_item: true 
+      is_mobile_nav_item: true
     - title: "Github"
       description: "Check out our Github"
       url: "https://github.com/ten7/tractorbeam.ten7.com"
       is_mobile_nav_item: true
-
+      is_button: true
 
 markdown: kramdown
 
 collections:
-  pages:
-    output: true
+    pages:
+        output: true
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
