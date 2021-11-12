@@ -11,12 +11,12 @@ Tractorbeam is a Docker container that can back up your entire website from a va
 
 ## If your website's host already has backups, why do you need Tractorbeam?
 
-Because your host’s backups are likely in the same place as your site. What if something happens to that data center? Your site and your backups might be compromised. It always makes good business sense to have off-site backups. [Tractorbeam can help you get there!](/support/)
+Because your host’s backups are likely in the same place as your site. What if something happens to that data center? Your site and your backups might be compromised. It always makes good business sense to have off-site backups. [Tractorbeam can help you get there!](/support.html)
 
 
 ## Using Tractorbeam
 
-Run the single shot container on your own infrastructure, see [tractorbeam.ten7.com/setup](/setup/) for details.
+Run the single shot container on your own infrastructure, see [tractorbeam.ten7.com/setup](/setup.html) for details.
 
 
 ## Capabilities
