@@ -66,9 +66,9 @@
        
 	</div>
 	{% else %}
-		<div class="navbar-item">
+		<div class="navbar-item is-hidden-touch">
 		{% unless item.is_button %}
-			<a class="navbar-item is-hidden-touch" href="{{ item.url }}">{{ item.title }}</a>
+			<a class="navbar-item" href="{{ item.url }}">{{ item.title }}</a>
 		{% endunless %}
 		</div>
 	{% endif %}
