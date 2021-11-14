@@ -133,6 +133,10 @@ li > ul > li::before {
 			font-size: 0.8125rem;
 			line-height: 0.9375rem;
 		}
+
+		.post-content {
+			min-height: 70vh;
+		}
 	}
 }
 
